@@ -26,9 +26,12 @@ class controller:
 
 
 if __name__ == "__main__":
-    ctrl = controller(priority=True)
+    main = controller(priority=True)
+    first = controller(priority=False)
 
-    for t in range(10):
-        ctrl.tick()
-        print (ctrl.output())
+    for t in range( 10):
+        main.tick()
+        print ("Time ", "{0:3d}".format(t), main.output())
+        first.tick()
+        print ("Time ", "{0:3d}".format(t), first.output())
 
